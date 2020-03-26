@@ -10,8 +10,7 @@ module.exports = {
             .first();
             
         if(!ong){
-            console.log(ong);
-            return res.json({ error: 'No ONG found with this ID' });
+            return res.sendStatus(400).json({ error: 'No ONG found with this ID' });
         }
         return res.json(ong);
     }
